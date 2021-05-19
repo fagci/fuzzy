@@ -1,0 +1,4 @@
+beautifulsoup4
+fire
+requests
+requests-cache

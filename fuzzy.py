@@ -74,9 +74,8 @@ class Fuzzy(Session):
             s = BeautifulSoup(r.text, 'html.parser')
             if s.title:
                 title = s.title.text
-            else:
-                if s.h1:
-                    title = s.h1.text
+            elif s.h1:
+                title = s.h1.text
             title = title.replace('\n', ' ').replace('\r', '')
         return status, path, code, len(r.content) if status else 0, title
 
